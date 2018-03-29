@@ -1,0 +1,20 @@
+﻿eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    instanceId: ${spring.application.name}:${spring.cloud.client.ipAddress:${random.value}}
+  client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 90
+    registerWithEureka: false
+    fetchRegistry: true
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      #defaultZone: http://10.10.33.86:8761/eureka/,http://10.10.33.85:8761/eureka/
+      defaultZone: http://esdev.org.jyall.com/eureka/
+    jyctrller:
+      # 是否需要注册Controller
+      registered: true
+      #registryUrls: http://10.10.33.84:8761/eureka/,http://10.10.33.83:8761/eureka/
+      registryUrls: http://ecdev.org.jyall.com/eureka/

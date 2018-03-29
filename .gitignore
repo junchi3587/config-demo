@@ -1,0 +1,20 @@
+# Created by .ignore support plugin (hsz.mobi)
+.DS_Store
+.gradle/
+.idea/compiler.xml
+.idea/gradle.xml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/modules/config-service.iml
+.idea/modules/eureka-client/
+.idea/vcs.xml
+.idea/workspace.xml
+config-client-demo/out/production/classes/com/starchi/
+config-client-demo/src/test/
+config-demo.iml
+config-repository/.DS_Store
+config-repository/dev/.DS_Store
+config-server/out/production/classes/com/starchi/
+eureka-server/out/
+settings.gradle

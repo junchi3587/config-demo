@@ -1,2 +1,1 @@
-# config-demo
-SpringCloud  Config Demo
+# Spring-Cloud Config Demo

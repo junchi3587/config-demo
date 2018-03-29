@@ -1,0 +1,15 @@
+server:
+  port: 1111
+eureka:
+  instance:
+    hostname: localhost
+    metadataMap:
+      instanceId: ${spring.application.name}:${random.value}
+  client:
+    #false 代表不注册自己
+    register-with-eureka: false
+    #false 不需要检索服务
+    fetch-registry: false
+    #注册地址
+    serviceUrl.defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+

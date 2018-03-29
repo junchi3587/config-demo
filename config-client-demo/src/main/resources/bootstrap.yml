@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: config-client-demo
+  http:
+    encoding: { charset: UTF-8, enable: true, force: true }
+  cloud:
+    config:
+      name: application
+      profile: test,${spring.application.name}
+      label: dev
+      discovery:
+        enabled: true
+        serviceId: config-server
+      #允许失败快速响应
+      fail-fast: true
+    stream:
+      #指定用kafka stream来作为默认消息中间件
+      default-binder: kafka
+      kafka:
+        binder:
+          brokers: localhost:9092
+          zkNodes: localhost:2181,localhost:2182,localhost:2183
+          configuration:
+            auto:
+              offset:
+                #可以设置原生kafka属性，比如设置新的消费组从最新的offset开始消费
+                reset: latest
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 10
+    #在注册中心展示名称+ip+随机数
+    instanceId: ${spring.application.name:${random.value}}:${server.port}
+    #在注册中心默认跳转地址，跳到swagger
+    status-page-url:  http://${spring.cloud.client.ipAddress}:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+
