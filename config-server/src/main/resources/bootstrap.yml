@@ -7,7 +7,9 @@ spring:
     config:
       server:
         git:
+          #git地址
           uri: https://gitee.com/starchi/config-demo.git
+          #git地址查看目录，可配多个
           search-paths: config-repository
     stream:
       #指定用kafka stream来作为默认消息中间件
