@@ -7,12 +7,12 @@ spring:
     config:
       name: application
       profile: test,${spring.application.name}
-      label: master
+      label: dev
       discovery:
         enabled: true
         serviceId: config-server
-      #允许失败快速响应
-      fail-fast: true
+#      #允许失败快速响应
+#      fail-fast: true
     stream:
       #指定用kafka stream来作为默认消息中间件
       default-binder: kafka

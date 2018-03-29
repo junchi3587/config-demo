@@ -17,4 +17,3 @@ config-repository/.DS_Store
 config-repository/dev/.DS_Store
 config-server/out/production/classes/com/starchi/
 eureka-server/out/
-settings.gradle
