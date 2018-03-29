@@ -7,7 +7,7 @@ spring:
     config:
       name: application
       profile: test,${spring.application.name}
-      label: dev
+      label: master
       discovery:
         enabled: true
         serviceId: config-server

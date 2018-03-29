@@ -7,9 +7,8 @@ spring:
     config:
       server:
         git:
-          username: jczhang
-          password: ZHAng1234
-          uri: http://10.0.0.9:9005/config/config-repository.git
+          uri: https://gitee.com/starchi/config-demo.git
+          search-paths: config-repository
     stream:
       #指定用kafka stream来作为默认消息中间件
       default-binder: kafka
