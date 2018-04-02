@@ -1,3 +1,3 @@
 # Spring-Cloud Config Demo
 
-https://gitee.com/starchi/config-demo/wikis
+https://blog.csdn.net/junchi_/article/details/79762471
